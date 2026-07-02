@@ -19,30 +19,30 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
       viewBox="0 0 64 64"
       fill="none"
       stroke={gold}
-      strokeWidth="2.2"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
       className="h-full w-auto"
     >
       {/*
-        Salon monogram: two continuous ribbons form a pair of scissors.
-        Each ribbon starts at the bottom as a blade tip, rises up crossing
-        the other at the centre pivot, then loops back on itself at the top
-        to form the finger-hole. The two loops meet in the middle as a bow.
+        Salon monogram: two continuous ribbons form the scissors.
+        Each ribbon starts as a blade tip at the bottom, travels up to
+        the central pivot, then loops around to form a finger-hole on
+        the opposite side. The two loops meet at the pivot as a bow.
       */}
-      {/* Left ribbon: bottom-left blade tip → crosses centre → up-right → loops back to centre-top */}
-      <path d="M10 56
-               L 32 34
-               L 40 20
-               C 44 12, 32 8, 30 18
-               C 29 24, 34 28, 32 32" />
-      {/* Right ribbon: bottom-right blade tip → crosses centre → up-left → loops back to centre-top */}
-      <path d="M54 56
-               L 32 34
-               L 24 20
-               C 20 12, 32 8, 34 18
-               C 35 24, 30 28, 32 32" />
+      {/* Left ribbon: bottom-left blade → pivot → right-hand loop → back to pivot */}
+      <path d="M 10 56
+               L 32 32
+               C 44 24, 52 18, 46 12
+               C 40 6,  30 12, 32 22
+               C 32 26, 32 30, 32 32" />
+      {/* Right ribbon: bottom-right blade → pivot → left-hand loop → back to pivot */}
+      <path d="M 54 56
+               L 32 32
+               C 20 24, 12 18, 18 12
+               C 24 6,  34 12, 32 22
+               C 32 26, 32 30, 32 32" />
     </svg>
   );
 
