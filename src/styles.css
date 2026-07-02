@@ -46,32 +46,33 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Barlow Condensed", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.980 0.004 78.2);
-  --foreground: oklch(0.297 0.000 263.3);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.297 0.000 263.3);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.297 0.000 263.3);
-  --primary: oklch(0.459 0.170 3.8);
-  --primary-foreground: oklch(0.985 0.003 60);
-  --secondary: oklch(0.960 0.010 350);
-  --secondary-foreground: oklch(0.297 0.000 263.3);
-  --muted: oklch(0.960 0.005 78);
-  --muted-foreground: oklch(0.520 0.015 260);
-  --accent: oklch(0.725 0.175 349.7);
-  --accent-foreground: oklch(0.985 0.003 60);
+  /* Palette drawn from the salon doormat: cream background, charcoal wordmark, antique gold monogram */
+  --background: oklch(0.955 0.012 85);
+  --foreground: oklch(0.235 0.010 60);
+  --card: oklch(0.985 0.008 85);
+  --card-foreground: oklch(0.235 0.010 60);
+  --popover: oklch(0.985 0.008 85);
+  --popover-foreground: oklch(0.235 0.010 60);
+  --primary: oklch(0.235 0.010 60);
+  --primary-foreground: oklch(0.955 0.012 85);
+  --secondary: oklch(0.910 0.020 85);
+  --secondary-foreground: oklch(0.235 0.010 60);
+  --muted: oklch(0.925 0.015 85);
+  --muted-foreground: oklch(0.450 0.015 65);
+  --accent: oklch(0.705 0.075 82);
+  --accent-foreground: oklch(0.235 0.010 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.910 0.010 80);
-  --input: oklch(0.910 0.010 80);
-  --ring: oklch(0.459 0.170 3.8);
+  --border: oklch(0.870 0.015 80);
+  --input: oklch(0.870 0.015 80);
+  --ring: oklch(0.705 0.075 82);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -141,7 +142,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 }
