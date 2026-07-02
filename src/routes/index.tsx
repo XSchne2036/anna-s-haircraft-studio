@@ -21,6 +21,7 @@ import heroSalon from "@/assets/stuhl.jpg.asset.json";
 import aboutStylist from "@/assets/waschbecken.jpg.asset.json";
 import lampeImg from "@/assets/lampe.jpg.asset.json";
 import glasImg from "@/assets/glas.jpg.asset.json";
+import { Logo } from "@/components/logo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -79,8 +80,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-foreground">
-          <span className="font-[family-name:var(--font-display)] text-xl">Anna Hammesfahr</span>
+        <a href="#" className="flex items-center text-foreground">
+          <Logo />
         </a>
 
         {/* Desktop nav */}
