@@ -1,6 +1,6 @@
 type LogoProps = {
   className?: string;
-  variant?: "full" | "mark";
+  variant?: "full" | "compact" | "mark";
   invert?: boolean;
 };
 
@@ -40,16 +40,37 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
     return <span className={className}>{Monogram}</span>;
   }
 
+  if (variant === "compact") {
+    return (
+      <span
+        className={className}
+        style={{ color: ink }}
+        aria-label="Anna Hammesfahr Friseurhandwerk"
+      >
+        <span className="flex items-center gap-2.5">
+          <span
+            className="flex flex-col leading-[0.95] tracking-[0.06em]"
+            style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
+          >
+            <span className="text-base sm:text-lg">ANNA</span>
+            <span className="text-base sm:text-lg">HAMMESFAHR</span>
+          </span>
+          <span className="inline-block h-9 w-9">{Monogram}</span>
+        </span>
+      </span>
+    );
+  }
+
   return (
     <span
       className={className}
       style={{ color: ink }}
       aria-label="Anna Hammesfahr Friseurhandwerk"
     >
-      <span className="flex items-center gap-2.5">
-        {/* Vertical caption, constrained to the wordmark height */}
+      <span className="inline-flex items-stretch gap-3">
+        {/* Vertical caption on the left, height matches the wordmark */}
         <span
-          className="inline-flex h-10 items-center text-[0.5rem] font-semibold uppercase leading-none tracking-[0.3em]"
+          className="text-[0.6rem] font-semibold uppercase leading-none tracking-[0.4em]"
           style={{
             writingMode: "vertical-rl",
             transform: "rotate(180deg)",
@@ -58,16 +79,16 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
         >
           Friseurhandwerk
         </span>
-        {/* Stacked wordmark */}
         <span
-          className="flex flex-col leading-[0.95] tracking-[0.06em]"
+          className="flex flex-col justify-center leading-[0.95] tracking-[0.06em]"
           style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
         >
-          <span className="text-base sm:text-lg">ANNA</span>
-          <span className="text-base sm:text-lg">HAMMESFAHR</span>
+          <span className="text-2xl sm:text-3xl">ANNA</span>
+          <span className="text-2xl sm:text-3xl">HAMMESFAHR</span>
         </span>
-        {/* Monogram */}
-        <span className="inline-block h-9 w-9">{Monogram}</span>
+        <span className="inline-flex items-center">
+          <span className="inline-block h-14 w-14">{Monogram}</span>
+        </span>
       </span>
     </span>
   );
