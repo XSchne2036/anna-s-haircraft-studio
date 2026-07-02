@@ -19,20 +19,30 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
       viewBox="0 0 64 64"
       fill="none"
       stroke={gold}
-      strokeWidth="3"
+      strokeWidth="2.4"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
       className="h-full w-auto"
     >
-      {/* Central stem */}
-      <path d="M32 8 V56" />
-      {/* Left loop (scissor bow) */}
-      <path d="M32 30 C 14 26, 10 46, 22 50 C 32 52, 34 40, 32 32" />
-      {/* Right loop */}
-      <path d="M32 30 C 50 26, 54 46, 42 50 C 32 52, 30 40, 32 32" />
-      {/* Top flourish */}
-      <path d="M28 12 C 30 16, 34 16, 36 12" />
+      {/*
+        Salon monogram: a pair of scissors whose finger-loops on top
+        form a bow, and whose blades cross into an X below.
+        The two continuous ribbons start at the top pinch, loop out,
+        cross at the centre, and end as the blade tips.
+      */}
+      {/* Left ribbon: from top pinch → loops out left → crosses centre → ends as bottom-right blade */}
+      <path d="M32 14
+               C 22 12, 12 20, 14 30
+               C 16 38, 28 36, 32 32
+               L 52 54" />
+      {/* Right ribbon: mirror — top pinch → loops out right → crosses centre → ends as bottom-left blade */}
+      <path d="M32 14
+               C 42 12, 52 20, 50 30
+               C 48 38, 36 36, 32 32
+               L 12 54" />
+      {/* Small knot where the two loops meet at the top */}
+      <path d="M30 14 C 31 12, 33 12, 34 14" />
     </svg>
   );
 
