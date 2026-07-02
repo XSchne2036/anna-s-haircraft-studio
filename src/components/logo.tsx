@@ -65,7 +65,7 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
             <span className="text-base sm:text-lg">ANNA</span>
             <span className="text-base sm:text-lg">HAMMESFAHR</span>
           </span>
-          <span className="inline-block h-9 w-9">{Monogram}</span>
+          <span className="inline-block h-11 w-11">{Monogram}</span>
         </span>
       </span>
     );
