@@ -59,6 +59,7 @@ function IndexPage() {
         <AboutSection />
         <ServicesSection />
         <TrustSection />
+        <ImpressionsSection />
         <ContactSection />
       </main>
       <Footer />
