@@ -34,15 +34,15 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
       {/* Left ribbon: bottom-left blade → pivot → right-hand loop → back to pivot */}
       <path d="M 10 56
                L 32 32
-               C 44 24, 52 18, 46 12
-               C 40 6,  30 12, 32 22
-               C 32 26, 32 30, 32 32" />
+               C 46 22, 54 14, 46 10
+               C 38 6,  30 12, 32 22
+               L 32 32" />
       {/* Right ribbon: bottom-right blade → pivot → left-hand loop → back to pivot */}
       <path d="M 54 56
                L 32 32
-               C 20 24, 12 18, 18 12
-               C 24 6,  34 12, 32 22
-               C 32 26, 32 30, 32 32" />
+               C 18 22, 10 14, 18 10
+               C 26 6,  34 12, 32 22
+               L 32 32" />
     </svg>
   );
 
