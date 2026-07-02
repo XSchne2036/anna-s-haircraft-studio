@@ -17,8 +17,10 @@ import {
   Clock,
   ExternalLink,
 } from "lucide-react";
-import heroSalon from "@/assets/hero-salon.jpg";
-import aboutStylist from "@/assets/about-stylist.jpg";
+import heroSalon from "@/assets/stuhl.jpg.asset.json";
+import aboutStylist from "@/assets/waschbecken.jpg.asset.json";
+import lampeImg from "@/assets/lampe.jpg.asset.json";
+import glasImg from "@/assets/glas.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,6 +59,7 @@ function IndexPage() {
         <AboutSection />
         <ServicesSection />
         <TrustSection />
+        <ImpressionsSection />
         <ContactSection />
       </main>
       <Footer />
@@ -141,7 +144,7 @@ function HeroSection() {
   return (
     <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden md:min-h-[700px]">
       <img
-        src={heroSalon}
+        src={heroSalon.url}
         alt="Eleganter Friseursalon mit warmem Ambiente"
         className="absolute inset-0 size-full object-cover"
         width={1536}
@@ -216,7 +219,7 @@ function AboutSection() {
           <div className="order-1 lg:order-2">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <img
-                src={aboutStylist}
+                src={aboutStylist.url}
                 alt="Friseurin bei der professionellen Haarbehandlung"
                 className="size-full object-cover"
                 width={1024}
@@ -384,6 +387,45 @@ function TrustSection() {
                 In entspannter Umgebung verwöhnen wir Sie mit Fingerspitzengefühl und Liebe zum Detail.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ImpressionsSection() {
+  return (
+    <section className="py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <span className="text-sm font-medium uppercase tracking-widest text-primary">
+            Impressionen
+          </span>
+          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
+            Ein Ort mit Charakter
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
+            Historisches Gemäuer, liebevoll gestaltete Details und ein Kaffee zum Wohlfühlen —
+            in unserem Salon dürfen Sie einen Moment abschalten.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="overflow-hidden rounded-2xl shadow-md">
+            <img
+              src={lampeImg.url}
+              alt="Historischer Messing-Kronleuchter mit geschliffenen Glasschirmen an der Stuckdecke"
+              className="size-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-md">
+            <img
+              src={glasImg.url}
+              alt="Kaffee und Wasser mit goldenem Rand als Willkommensgruß im Salon"
+              className="size-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
