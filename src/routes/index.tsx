@@ -17,8 +17,10 @@ import {
   Clock,
   ExternalLink,
 } from "lucide-react";
-import heroSalon from "@/assets/hero-salon.jpg";
-import aboutStylist from "@/assets/about-stylist.jpg";
+import heroSalon from "@/assets/stuhl.jpg.asset.json";
+import aboutStylist from "@/assets/waschbecken.jpg.asset.json";
+import lampeImg from "@/assets/lampe.jpg.asset.json";
+import glasImg from "@/assets/glas.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -141,7 +143,7 @@ function HeroSection() {
   return (
     <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden md:min-h-[700px]">
       <img
-        src={heroSalon}
+        src={heroSalon.url}
         alt="Eleganter Friseursalon mit warmem Ambiente"
         className="absolute inset-0 size-full object-cover"
         width={1536}
@@ -216,7 +218,7 @@ function AboutSection() {
           <div className="order-1 lg:order-2">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <img
-                src={aboutStylist}
+                src={aboutStylist.url}
                 alt="Friseurin bei der professionellen Haarbehandlung"
                 className="size-full object-cover"
                 width={1024}
