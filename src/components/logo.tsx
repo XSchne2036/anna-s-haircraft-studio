@@ -46,10 +46,10 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
       style={{ color: ink }}
       aria-label="Anna Hammesfahr Friseurhandwerk"
     >
-      <span className="flex items-center gap-3">
-        {/* Vertical caption */}
+      <span className="flex items-center gap-2.5">
+        {/* Vertical caption, constrained to the wordmark height */}
         <span
-          className="text-[0.55rem] font-semibold uppercase leading-none tracking-[0.35em]"
+          className="inline-flex h-10 items-center text-[0.5rem] font-semibold uppercase leading-none tracking-[0.3em]"
           style={{
             writingMode: "vertical-rl",
             transform: "rotate(180deg)",
@@ -60,14 +60,14 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
         </span>
         {/* Stacked wordmark */}
         <span
-          className="flex flex-col leading-[0.9] tracking-[0.08em]"
+          className="flex flex-col leading-[0.95] tracking-[0.06em]"
           style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
         >
-          <span className="text-lg sm:text-xl">ANNA</span>
-          <span className="text-lg sm:text-xl">HAMMESFAHR</span>
+          <span className="text-base sm:text-lg">ANNA</span>
+          <span className="text-base sm:text-lg">HAMMESFAHR</span>
         </span>
         {/* Monogram */}
-        <span className="h-9 w-9 sm:h-10 sm:w-10">{Monogram}</span>
+        <span className="inline-block h-9 w-9">{Monogram}</span>
       </span>
     </span>
   );
