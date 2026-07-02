@@ -19,20 +19,30 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
       viewBox="0 0 64 64"
       fill="none"
       stroke={gold}
-      strokeWidth="3"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
       className="h-full w-auto"
     >
-      {/* Central stem */}
-      <path d="M32 8 V56" />
-      {/* Left loop (scissor bow) */}
-      <path d="M32 30 C 14 26, 10 46, 22 50 C 32 52, 34 40, 32 32" />
-      {/* Right loop */}
-      <path d="M32 30 C 50 26, 54 46, 42 50 C 32 52, 30 40, 32 32" />
-      {/* Top flourish */}
-      <path d="M28 12 C 30 16, 34 16, 36 12" />
+      {/*
+        Salon monogram: two continuous ribbons form the scissors.
+        Each ribbon starts as a blade tip at the bottom, travels up to
+        the central pivot, then loops around to form a finger-hole on
+        the opposite side. The two loops meet at the pivot as a bow.
+      */}
+      {/* Left ribbon: bottom-left blade → pivot → right-hand loop → back to pivot */}
+      <path d="M 10 56
+               L 32 32
+               C 46 22, 54 14, 46 10
+               C 38 6,  30 12, 32 22
+               L 32 32" />
+      {/* Right ribbon: bottom-right blade → pivot → left-hand loop → back to pivot */}
+      <path d="M 54 56
+               L 32 32
+               C 18 22, 10 14, 18 10
+               C 26 6,  34 12, 32 22
+               L 32 32" />
     </svg>
   );
 
@@ -55,7 +65,7 @@ export function Logo({ className, variant = "full", invert = false }: LogoProps)
             <span className="text-base sm:text-lg">ANNA</span>
             <span className="text-base sm:text-lg">HAMMESFAHR</span>
           </span>
-          <span className="inline-block h-9 w-9">{Monogram}</span>
+          <span className="inline-block h-11 w-11">{Monogram}</span>
         </span>
       </span>
     );
